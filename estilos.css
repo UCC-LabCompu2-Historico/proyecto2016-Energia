@@ -58,3 +58,7 @@ h1{
 
 }
 .button{align-content: space-around;}
+
+.entrada{
+    float: right;
+}
