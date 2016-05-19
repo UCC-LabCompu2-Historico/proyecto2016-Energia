@@ -8,12 +8,12 @@
 
 </header>
 <body>
-<H1><img src="logo%20de%20la%20pagina.jpg"> FISICA II: Energia</H1>
+<H1><img src="logo.jpg"> FISICA II: Energia</H1>
 
 <div class="wrap">
     <div class="izquierda">
 
-        <h3 style="color: #000;">objetivos:</h3>
+        <h3 >objetivos:</h3>
         <ol>
             <li>aprender a resolver problemas por energia</li>
             <li>realizar los diagramas de cuerpo libre</li>
@@ -27,7 +27,7 @@
             el bloque viaja por la pista , golpea a un resorte con 220[N/m] de constante de fuerza y
             comprime el resorte 0.300[m] desde s posicion de equilibrio antes de llegar al reposo momentaneamente.
             Determine el coeficiente de friccion cinetica entre el bloque y la superficie rugosa</p>
-        <img src="Ejemplo%20del%20problema.png">
+        <img src="Ejemplo_del_problema.png">
 
         <h3>Solucion:</h3>
         <p>
@@ -41,25 +41,48 @@
     <p style="font-size: 150%"> Ahora , ya estas listo para resolver tu problema de energia</p>
     <h3>Suerte!!</h3>
 </div>
-<div class="resultado">
 
-    <fieldset class="datos">
-        <legend><h3 style="color: #000">Datos</h3></legend>
-        <p><label>Energia potencial gravitatoria</label><span class="entrada"><input type="text"><input type="button" required value="" align="ju"></span></p>
-        <p><label>Energia potencial elastica</label><span class="entrada"><input type="text"><input type="button" required value=""></span></p>
-        <p><label>Energia cinetica</label> <span class="entrada"><input type="text"><input type="button" required value=""></span></p>
-        <p><label>altura</label>  <span class="entrada"><input type="text"><input type="button" required value="m"></span></p>
-        <p><label>distancia</label> <span class="entrada"><input type="text"><input type="button" required value="m"></span></p>
-        <p><label>rosamiento</label> <span class="entrada"><input type="text"><input type="button" required value="N/m"></span></p>
-        <p><label>velocidad incial</label> <span class="entrada"> <input type="text"><input type="button" required value="m/s2"></span></p>
-        <p><label>masa</label>  <span class="entrada"><input type="text"><input type="button" required value="kg"></span></p>
+<div id="boton" onclick="divLogin()">
+    Mostrar/Ocultar
+</div>
+<div id="caja">
+    <SCRIPT>
+    var clic = 1;
+    function divLogin(){
+    if(clic==1){
+    document.getElementById("caja").style.height = "500px";
+        document.getElementById("resultado").style.display = `block`;
 
-    </fieldset>
+        clic = clic + 1;
+    } else{
+    document.getElementById("caja").style.height = "0px";
+        document.getElementById("resultado").style.display = `none`;
 
-    <div class="solucion">
-        <img src="resolucion.png">
+        clic = 1;
+    }
+    }
+    </SCRIPT>
+    <div class="resultado" id="Resultado">
+        <fieldset class="datos">
+            <legend><h3 style="color: #000">Datos</h3></legend>
+            <p><label>Energia potencial gravitatoria</label><span class="entrada"><input type="text"><input type="button" required value="" align="ju"></span></p>
+            <p><label>Energia potencial elastica</label><span class="entrada"><input type="text"><input type="button" required value=""></span></p>
+            <p><label>Energia cinetica</label> <span class="entrada"><input type="text"><input type="button" required value=""></span></p>
+            <p><label>altura</label>  <span class="entrada"><input type="text"><input type="button" required value="m"></span></p>
+            <p><label>distancia</label> <span class="entrada"><input type="text"><input type="button" required value="m"></span></p>
+            <p><label>rosamiento</label> <span class="entrada"><input type="text"><input type="button" required value="N/m"></span></p>
+            <p><label>velocidad incial</label> <span class="entrada"> <input type="text"><input type="button" required value="m/s2"></span></p>
+            <p><label>masa</label>  <span class="entrada"><input type="text"><input type="button" required value="kg"></span></p>
+
+        </fieldset>
+
+        <div class="solucion">
+            <img src="resolucion.png">
+        </div>
+
     </div>
 </div>
+
 
 </body>
 </html>
